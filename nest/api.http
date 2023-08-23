@@ -1,0 +1,23 @@
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes/64e61432104bc0b015f2cac1
+### 
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+	"name": "route test 1",
+	"source_id": "ChIJG2lyDYhMxwcR5hV9TUsBgJg",
+	"destination_id": "ChIJHTA4K_9JxwcRne24jUf2lH8"
+}
+
+### Coisas do Mapa
+
+### Pegar o place_id
+
+GET http://localhost:3000/places?text=AV G, 171, Conjunto Ceará, Fortaleza
+
+### Pegar direções entre 2 pontos
+GET http://localhost:3000/directions?originId=XXXXX&destinationId=YYYYY
+
