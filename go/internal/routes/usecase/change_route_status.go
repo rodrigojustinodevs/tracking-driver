@@ -3,7 +3,7 @@ package usecase
 import (
 	"time"
 
-	"github.com/devfullcycle/imersao14/go/internal/routes/entity"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/entity"
 )
 
 type ChangeRouteStatusInput struct {

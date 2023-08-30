@@ -7,13 +7,13 @@ import (
 	"net/http"
 
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
-	"github.com/devfullcycle/imersao14/go/internal/routes/entity"
-	"github.com/devfullcycle/imersao14/go/internal/routes/infra/repository"
-	"github.com/devfullcycle/imersao14/go/internal/routes/usecase"
-	"github.com/devfullcycle/imersao14/go/pkg/kafka"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/entity"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/infra/repository"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/usecase"
+	"github.com/rodrigojustinodevs/tracking-driver/go/pkg/kafka"
 )
 
 var (
@@ -52,7 +52,7 @@ func main() {
 	servers := "host.docker.internal:9094"
 	go kafka.Consume(topics, servers, msgChan)
 
-	db, err := sql.Open("mysql", "root:root@tcp(host.docker.internal:3306)/routes?parseTime=true")
+	db, err := sql.Open("mysql", "root:root@tcp(host.docker.internal:3307)/routes?parseTime=true")
 	if err != nil {
 		panic(err)
 	}

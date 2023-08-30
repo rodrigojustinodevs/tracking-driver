@@ -1,3 +1,4 @@
 .history/
 /nest/.env
 /nextjs/.env
+/go/mysql

@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/devfullcycle/imersao14/go/internal/routes/entity"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/entity"
 
 	"github.com/stretchr/testify/require"
 )

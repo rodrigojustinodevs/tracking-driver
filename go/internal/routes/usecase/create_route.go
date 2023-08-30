@@ -3,7 +3,7 @@ package usecase
 import (
 	"fmt"
 
-	"github.com/devfullcycle/imersao14/go/internal/routes/entity"
+	"github.com/rodrigojustinodevs/tracking-driver/go/internal/routes/entity"
 )
 
 type CreateRouteInput struct {

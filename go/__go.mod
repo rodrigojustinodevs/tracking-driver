@@ -1,9 +1,10 @@
-module github.com/rodrigojustinodevs/tracking-driver/go
+module git
 
 go 1.21.0
 
 require (
 	github.com/confluentinc/confluent-kafka-go v1.9.2
+	github.com/rodrigojustinodevs/tracking-driver/go v0.0.0-20230825204530-01d6f0ecef4b
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/prometheus/client_golang v1.16.0
