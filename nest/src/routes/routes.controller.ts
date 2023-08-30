@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { RoutesService } from './routes.service';
 import { CreateRouteDto } from './dto/create-route.dto';
 import { UpdateRouteDto } from './dto/update-route.dto';
@@ -9,8 +17,9 @@ export class RoutesController {
   constructor(private readonly routesService: RoutesService) {}
 
   @Post()
-  create(@Body() createRouteDto: CreateRouteDto) {
-    return this.routesService.create(createRouteDto);
+  async create(@Body() createRouteDto: CreateRouteDto) {
+    const route = await this.routesService.create(createRouteDto);
+    return new RouteSerializer(route);
   }
 
   @Get()
@@ -23,7 +32,6 @@ export class RoutesController {
   async findOne(@Param('id') id: string) {
     const route = await this.routesService.findOne(id);
     return new RouteSerializer(route);
-
   }
 
   @Patch(':id')

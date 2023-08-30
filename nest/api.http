@@ -7,7 +7,7 @@ POST http://localhost:3000/routes
 Content-Type: application/json
 
 {
-	"name": "route test 1",
+	"name": "route test kafka 6",
 	"source_id": "ChIJG2lyDYhMxwcR5hV9TUsBgJg",
 	"destination_id": "ChIJHTA4K_9JxwcRne24jUf2lH8"
 }
